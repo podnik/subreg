@@ -1,0 +1,16 @@
+{
+  "name": "podnik/subreg",
+  "type": "library",
+  "description": "This is Subreg api abstraction layer for communicating with soap.subreg.cz",
+  "keywords": ["subreg","api","soap","client"],
+  "homepage": "podnik.net",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robert Mikšík",
+      "email": "robert@miksik.cz",
+      "homepage": "https://miksik.cz",
+      "role": "Developer"
+    }
+  ],
+}
