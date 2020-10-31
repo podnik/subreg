@@ -2,5 +2,5 @@
 .idea/
 
 vendor/
-
+example/
 composer.lock
