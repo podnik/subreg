@@ -19,5 +19,8 @@
   },
   "require-dev": {
     "tracy/tracy": "^2.7"
+  },
+  "autoload": {
+    "classmap": ["src"]
   }
 }
