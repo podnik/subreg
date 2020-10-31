@@ -12,5 +12,10 @@
       "homepage": "https://miksik.cz",
       "role": "Developer"
     }
-  ]
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "tracy/tracy": "^2.7"
+  }
 }

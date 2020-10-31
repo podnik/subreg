@@ -4,27 +4,27 @@
 class Client
 {
 
-    private $soapClient;
-    public function __construct($location, $uri, $login, $pass)
-    {
-        $this->soapClient = new \SoapClient(
-            null,
-            array(
-                "location" => $location,
-                "uri" => $uri
-            )
-        );
+    public $soapClient;
+    private $token;
 
-        $params = array (
+    public function __construct($login, $pass)
+    {
+        $this->soapClient = new \SoapClient("https://subreg.cz/wsdl");
+
+        $loginParams = array (
             "data" => array (
                 "login" => $login,
                 "password" => $pass,
             )
         );
 
-        $response = $this->soapClient->__call("Login",$params);
+        $response = $this->soapClient->__call("Login",$loginParams);
+        $this->token = $response->response->data->ssid;
+        dump($response);
+    }
 
-        dump($response);die();
+    public function checkDomain($domain) {
+        return $this->soapClient->Check_Domain([$this->token, $domain]);
     }
 
 }
