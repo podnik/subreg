@@ -3,7 +3,7 @@
   "type": "library",
   "description": "This is Subreg api abstraction layer for communicating with soap.subreg.cz",
   "keywords": ["subreg","api","soap","client"],
-  "homepage": "podnik.net",
+  "homepage": "https://podnik.net",
   "license": "MIT",
   "authors": [
     {
