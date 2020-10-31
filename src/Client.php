@@ -9,7 +9,7 @@ class Client
 
     public function __construct($login, $pass)
     {
-        $this->soapClient = new \SoapClient("https://subreg.cz/wsdl");
+        $this->soapClient = new SoapClient("https://subreg.cz/wsdl");
 
         $loginParams = array (
             "data" => array (
@@ -20,11 +20,16 @@ class Client
 
         $response = $this->soapClient->__call("Login",$loginParams);
         $this->token = $response->response->data->ssid;
-        dump($response);
+        bdump($response);
     }
 
     public function checkDomain($domain) {
-        return $this->soapClient->Check_Domain([$this->token, $domain]);
+        $params = [
+            "ssid" => $this->token,
+            "domain" => $domain
+        ];
+        bdump($params);
+        return $this->soapClient->Check_Domain($params);
     }
 
 }
