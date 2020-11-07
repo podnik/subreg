@@ -32,7 +32,7 @@ final class Subreg
      * @throws \Exception
      */
     public function base($f, ...$params) {
-        ApiPanel::startQuery("subreg",$f, $params);
+        if(class_exists("Podnik\ApiPanel"))ApiPanel::startQuery("subreg",$f, $params);
         $request = [
             "ssid" => $this->token
         ];
@@ -43,7 +43,7 @@ final class Subreg
         if ($response->status == "error") {
             throw new \Exception($response->error->errormsg,$response->error->errorcode->major);
         }
-        ApiPanel::endQuery("subreg",$f, $params);
+        if(class_exists("Podnik\ApiPanel"))ApiPanel::endQuery("subreg",$f, $params);
         return $response->data;
     }
     public function Domains_List() {
