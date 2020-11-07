@@ -1,6 +1,5 @@
 
 .idea/
-index.php
 vendor/
 example/
 composer.lock
