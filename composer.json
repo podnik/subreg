@@ -11,6 +11,12 @@
       "email": "robert@miksik.cz",
       "homepage": "https://miksik.cz",
       "role": "Developer"
+    },
+    {
+      "name": "Martin Mandík",
+      "email": "martinmandik00@gmail.com",
+      "homepage": "https://fuze.technology",
+      "role": "Developer"
     }
   ],
   "require": {
