@@ -19,13 +19,15 @@
       "role": "Developer"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
     "php": ">= 7.1",
     "ext-soap": "*"
   },
   "require-dev": {
     "tracy/tracy": "^2.7",
-    "contributte/dev": "^0.1.0"
+    "contributte/dev": "^0.1.0",
+    "podnik/api-panel": "dev-main"
   },
   "autoload": {
     "classmap": ["src"]
