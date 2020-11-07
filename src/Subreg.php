@@ -1,5 +1,7 @@
 <?php
 
+namespace Podnik;
+
 
 final class Subreg
 {
