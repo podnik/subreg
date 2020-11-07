@@ -11,7 +11,7 @@ final class Subreg
 
     public function __construct($login, $pass)
     {
-        $this->soapClient = new SoapClient("https://subreg.cz/wsdl");
+        $this->soapClient = new \SoapClient("https://subreg.cz/wsdl");
 
         $loginParams = array (
             "data" => array (
